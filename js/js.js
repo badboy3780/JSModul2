@@ -1,34 +1,32 @@
+'use strict'
+
 let userInput;
 const numbers = [];
 let total = 0;
-
-let value;
+const INVALID_FORM = 'Было введено не число, попробуйте еще раз'
 
 do{
-  value = +prompt("Вводите числа");
+  userInput = prompt("Вводите числа");
 
-  console.log(value);
-  if (isNaN(value)){
-    alert('Было введено не число, попробуйте еще раз');
+  if (userInput === null){
+    break;
+  }else if (isNaN(+userInput)){
+    alert(INVALID_FORM);
+  }else{
+
+    numbers.push(+userInput);
+
   }
 
-  if(!isNaN(value)){
+}while (userInput);
 
-    numbers.push(value);
-
-  }
-
-
-}while (value);
-
-console.log(numbers);
-
-
-  for(let i = 0; i < numbers.length; i++){
-    total += numbers[i];
-    }
 
 
 if (numbers.length != 0){
+
+    for(let i = 0; i < numbers.length; i++){
+      total += numbers[i];
+      }
+
   alert("Общая сумма чисел равна: " + total);
 }
