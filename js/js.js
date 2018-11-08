@@ -8,9 +8,7 @@ const INVALID_FORM = 'Было введено не число, попробуй�
 do{
   userInput = prompt("Вводите числа");
 
-  if (userInput === null){
-    break;
-  }else if (isNaN(+userInput)){
+  if (isNaN(+userInput)){
     alert(INVALID_FORM);
   }else{
 
@@ -18,15 +16,17 @@ do{
 
   }
 
-}while (userInput);
+}while (userInput !== null);
 
 
 
 if (numbers.length != 0){
 
-    for(let i = 0; i < numbers.length; i++){
-      total += numbers[i];
-      }
+  
+    for (let i of numbers){
+        total += i;
+    }
+
 
   alert("Общая сумма чисел равна: " + total);
 }
