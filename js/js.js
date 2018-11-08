@@ -3,7 +3,7 @@
 let userInput;
 const numbers = [];
 let total = 0;
-const INVALID_FORM = 'Было введено не число, попробуйте еще раз'
+const NONE_NUMBER_MSG = 'Было введено не число, попробуйте еще раз'
 
 do{
   userInput = prompt("Вводите числа");
@@ -20,9 +20,9 @@ do{
 
 
 
-if (numbers.length != 0){
+if (numbers.length !== 0){
 
-  
+
     for (let i of numbers){
         total += i;
     }
