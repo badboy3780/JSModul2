@@ -9,7 +9,7 @@ do {
   userInput = prompt("Вводите числа");
 
   if (isNaN(+userInput)) {
-    alert(INVALID_FORM);
+    alert(NONE_NUMBER_MSG);
   } else {
     numbers.push(+userInput);
   }
