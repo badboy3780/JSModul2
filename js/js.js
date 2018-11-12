@@ -8,6 +8,10 @@ const NONE_NUMBER_MSG = "Было введено не число, попробу
 do {
   userInput = prompt("Вводите числа");
 
+  if (userInput == null){
+    break;
+  }
+
   if (Number.isNaN(+userInput)) {
     alert(NONE_NUMBER_MSG);
   } else {
@@ -19,7 +23,8 @@ if (numbers.length !== 0) {
   for (let i of numbers) {
     total += i;
   }
-  if (total !== 0) {
+
     alert("Общая сумма чисел равна: " + total);
-  }
 }
+
+console.log(numbers);
